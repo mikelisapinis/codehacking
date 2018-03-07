@@ -42,11 +42,20 @@
                     {!! Form::file('photo_id', null, ['class'=>'form-control']) !!}
                </div>
 
-               <div class="form-group">
-                    {!! Form::submit('Create User', ['class'=>'btn btn-primary']) !!}
-               </div>
+               {!! Form::submit('Create User', ['class'=>'btn btn-primary float-left col-sm-4']) !!}
 
           {!! Form::close() !!}
+
+
+          {!! Form::open(['method'=>'DELETE', 'action'=>['AdminUsersController@destroy', $user->id]]) !!}
+
+               {!! Form::submit('Delete user', ['class'=>'btn btn-danger float-right col-sm-4']) !!}
+
+          {!! Form::close() !!}
+
+
+
+
 
           @include('includes.form-error')
 

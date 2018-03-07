@@ -28,6 +28,7 @@ mix.styles([
      'resources/assets/css/bootstrap.css',
      'resources/assets/css/font-awesome.css',
      'resources/assets/css/metisMenu.css',
-     'resources/assets/css/sb-admin-2.css'
+     'resources/assets/css/sb-admin-2.css',
+     'resources/assets/css/styles.css'
 
 ], path.normalize('./public/css/libs.css'));
