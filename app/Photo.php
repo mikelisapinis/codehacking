@@ -7,10 +7,23 @@ use Illuminate\Database\Eloquent\Model;
 class Photo extends Model
 {
 
-    protected $fillable = [
+    protected $fillable = [ 'path' ];
+    protected $uploads = '/images/';
+    protected $placeholder = "placeholder.png";
 
-        'path'
+    public function getPathAttribute($photo){
 
-    ];
+        if( $photo = $this->uploads . $photo ){
+
+            return $photo;
+
+        } else {
+
+            return $this->uploads . $this->placeholder;
+
+        }
+        
+
+    }
 
 }
