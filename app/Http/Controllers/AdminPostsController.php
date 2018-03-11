@@ -65,9 +65,9 @@ class AdminPostsController extends Controller
 
         }
 
-        $post = Post::create($input);
+        $user->posts()->create($input);
 
-        return $input['user_id'];
+        return redirect('/admin/posts');
 
     }
 

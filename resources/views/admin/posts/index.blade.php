@@ -24,7 +24,7 @@
 
                          <tr>
                               <td>{{ $post->id }}</td>
-                              <td><img height="50" src="{{ $post->photo ? $post->$photo->path : 'http://placehold.it/50' }}"></td>
+                              <td><img height="50" src="{{ $post->photo_id ? $post->photo->path : 'http://placehold.it/50' }}"></td>
                               <td>{{ $post->user->name }}</td>
                               <td>{{ $post->category ? $post->category->name : 'Uncatagorized' }}</td>
                               <td>{{ $post->title }}</td>
